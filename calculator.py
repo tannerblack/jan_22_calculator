@@ -2,5 +2,8 @@
 A calculator library
 """
 
-def add(a,b):
-    return a + b
+def add(*args):
+    answer = 0
+    for value in args:
+        answer += value
+    return answer

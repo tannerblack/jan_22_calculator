@@ -10,3 +10,18 @@ def test_two_plus_two():
 def test_three_plus_three():
     #if given 3 and 3 as parameters, 6 should be returned
     assert add(3,3) == 6
+
+def test_no_parameters():
+    """
+    If no parameters provided, return 0.
+    """
+    assert add() == 0
+
+def test_one_two_three():
+    #Given 1,2,3 as parameters, 6 should return
+    assert add(1,2,3) == 6
+
+def test_negative_values():
+    # assert that negative values work
+    assert add(-1,-1,-4)
+    

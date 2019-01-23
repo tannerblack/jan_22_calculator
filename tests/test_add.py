@@ -1,6 +1,9 @@
 """
 Tests the add() function of the calculator.
 """
+
+import pytest
+
 from calculator import add
 
 def test_two_plus_two():
@@ -24,4 +27,7 @@ def test_one_two_three():
 def test_negative_values():
     # assert that negative values work
     assert add(-1,-1,-4)
-    
+
+def test_decimal_values():
+    #assert that 0.1, 0.1, and 0.1 equals 0.3
+    assert add(0.1, 0.1, 0.1) == pytest.approx(0.3)
